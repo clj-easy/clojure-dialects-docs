@@ -1,0 +1,269 @@
+= clojure-dialects-docs
+:idprefix:
+:idseparator: -
+:toc:
+:toclevels: 3
+// a wee separator used in section headings:
+:s: ⬩
+
+== Introduction
+https://clojure.org/[Clojure] has inspired a variety of dialects.
+This little repository's goal is to provide a brief description of each with links for the curious.
+
+We consider something a Clojure dialect when it runs Clojure (or very Clojure-ish) code.
+Support for a dialect-specific reader-conditional target is a good hint that we have a true dialect.
+You'll find dialects sorted by their birth year.
+
+Where appropriate/possible, we've linked authors' sponsorship pages; consider sponsoring as a way of not only supporting ongoing work but also as a way of saying thank you for past efforts.
+
+Additions and corrections to this living document are most welcome from the community.
+
+== Clojure {s} JVM {s} 2007-
+https://clojure.org/[Clojure] is the granddaddy of them all.
+https://en.wikipedia.org/wiki/Clojure[Clojure] was invented by https://github.com/sponsors/richhickey[Rich Hickey].
+His first release of Clojure was in 2007.
+Clojure is maintained by the Clojure Core Team, which, as of this writing, includes https://github.com/puredanger[Alex Miller], https://fogus.me/me/[Michael Fogus], and https://www.jarrodctaylor.com/about/[Jarrod Taylor].
+Rich remains the lead.
+Clojure runs on the https://en.wikipedia.org/wiki/Java_virtual_machine[Java Virtual Machine] and has reach to the entire Java ecosystem.
+
+Clojure supports targeting dialect-specific code in `.cljc` files via https://clojure.org/guides/reader_conditionals[Reader conditionals].
+Clojure itself recognizes the `:clj` reader-conditional target, and files with the `.clj` extension as Clojure code.
+
+[#las3r,reftext=§Las3r]
+== Las3r {s} ActionScript 2.0 {s} 2008-2011
+// Announced ?: First commit 2008-09-13, last 2011-01-29
+https://github.com/aemoncannon/las3r[Las3r], a lisp for the https://en.wikipedia.org/wiki/ActionScript[ActionScript] Virtual Machine 2 was created by https://github.com/aemoncannon/[Aemon Cannon] in 2008.
+Did Aemon create the first alternate dialect of Clojure? Could be!
+
+[#clojureclr,reftext=§ClojureCLR]
+// Announced 2009-02-16 https://groups.google.com/g/clojure/c/VFccm49iXbo/m/FymmwGoCmBEJ
+== ClojureCLR {s} .NET Framework {s} 2009-
+https://github.com/clojure/clojure-clr[ClojureCLR] is a port of Clojure to the Common Language Runtime (which is the execution engine of Microsoft's .Net Framework).
+ClojureCLR lives under the Clojure Core Team umbrella.
+Its first commit was by https://github.com/sponsors/dmiller[David Miller] in 2009.
+David is still the leading force behind this project.
+
+ClojureCLR recognizes the `:cljr` reader-conditional target, and files with the `.cljr` extension as ClojureCLR code.
+
+[#scriptjure,reftext=§Scriptjure]
+== Scriptjure {s} JavaScript {s} 2009-2011
+// Announced 2009-10-08 https://groups.google.com/g/clojure/c/7o-qyOamEqA/m/owNW1Qy4vXkJ
+https://github.com/arohner/scriptjure/[Scriptjure] is a Clojure library for generating JavaScript by https://github.com/arohner[Allan Rohner].
+Scriptjure predates <<clojurescript>>.
+This project was announced in 2009, and its last commit was in 2011.
+
+While not actively under development, Scriptjure provided some initial inspiration for <<squint>>, <<cherry>>, and likely, <<clojurescript>>.
+
+[#clojurescript,reftext=§ClojureScript]
+== ClojureScript {s} JavaScript {s} 2011-
+// Announced 2011-07-21 https://groups.google.com/g/clojure/c/7b34U0Z_ZXQ/m/CVmbo49Rh2MJ
+https://www.clojurescript.org/[ClojureScript] is a compiler for Clojure that emits JavaScript compatible with the Google Closure optimizing compiler.
+ClojureScript lives under the Clojure Core Team umbrella.
+Its first commit was by Rich Hickey in 2011, and its ongoing development has been led by https://github.com/readme/stories/david-nolen[David Nolen] & https://blog.fikesfarm.com/pages/about.html[Mike Fikes].
+David remains the active lead to this day.
+
+ClojureScript recognizes the `:cljs` reader-conditional target, and files with the `.cljs` extension as ClojureScript code.
+
+****
+While not a dialect in itself, https://github.com/thheller/shadow-cljs[shadow-cljs] is certainly worth mentioning.
+It was created by https://github.com/sponsors/thheller[Thomas Heller] in 2015.
+Described as "ClojureScript compilation made easy", it is favoured by many ClojureScript developers because of its ease of use.
+****
+
+****
+In 2024, Google stopped public work on the Closure library.
+The Clojure Core team now maintains a https://github.com/clojure/closure-library[fork of Closure].
+Being Clojure-minded, they undid many past breaking changes committed by Google.
+****
+
+[#planck,reftext=§Planck]
+== Planck {s} JavaScript {s} 2015-2024
+// Announced 2015-07-31 https://groups.google.com/g/clojure/c/VaXIcAe6Sbw/m/SYSp0ErhBAAJ
+https://github.com/planck-repl/planck[Planck] is a stand-alone ClojureScript REPL announced by https://blog.fikesfarm.com/pages/about.html[Mike Fikes] in 2015.
+Planck uses https://clojurescript.org/reference/bootstrapping[Self-Hosted/Bootstrapped ClojureScript].
+It includes core library extensions to make it more Clojure-like.
+
+Planck ships its own executable and uses the https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html[JavaScriptCore] engine.
+
+Planck does not seem to be actively developed anymore.
+
+Planck does not have a planck-specific reader conditional target, but recognizes the `:cljs` reader-conditional target and `.cljs` file.
+
+[#jank,reftext=§Jank]
+== Jank {s} C++ atop LLVM jit {s} 2015-
+// Announced ???, first commit in 2015
+// Full time announced https://clojurians.slack.com/archives/C03SRH97FDK/p1727896891784649
+https://jank-lang.org/[Jank] is the native Clojure dialect hosted on https://llvm.org/[LLVM] with seamless C++ interop.
+https://github.com/sponsors/jeaye[Jeaye Wilkerson] started working on Jank in 2015, dove back into the effort in 2022, and went full-time on the project in 2025.
+Jank has gotten much attention from the Clojure community as Jeaye continues to lead it towards a production release.
+
+Jank recognizes the `:jank` reader-conditional target, and files with `.jank` extension as Jank code.
+
+[#lumo,reftext=§Lumo]
+== Lumo {s} JavaScript {s} 2016-2020
+// Announced 2016-11-09 https://clojurians.slack.com/archives/C06MAR553/p1478721253001143
+https://github.com/anmonteiro/lumo[Lumo], a fast, cross-platform, standalone ClojureScript environment, was announced in 2016 by https://github.com/sponsors/anmonteiro[Antonio Nuno Monteiro].
+Development activity stopped in 2020, and the repository was archived in 2022.
+
+Lumo is similar in spirit to <<planck>> but runs on https://nodejs.org[Node.js] and uses the https://v8.dev/[V8] JavaScript engine.
+
+[#joker,reftext=§Joker]
+== Joker {s} Go {s} 2016-
+// Announced ??, first release(?) 2016-12-11 https://github.com/candid82/joker/releases/tag/v0.5.0
+https://github.com/candid82/joker[Joker] is a small Clojure interpreter, linter, and formatter written in https://go.dev/[Go] by https://github.com/candid82[Roman Bataev].
+Its first release was in 2016.
+Joker is targeted at lightweight scripting with amenities for formatting and scripting.
+
+Fun fact: Joker's linter inspired https://github.com/clj-kondo/clj-kondo[clj-kondo].
+
+Joker recognizes the `:joker` reader-conditional target, and files with the `.joke` extension as Joker code.
+
+See also: <<glojure>>.
+
+[#glojure,reftext=§Glojure]
+== Glojure {s} Go {s} 2017-
+// Announced 2017-04-04 https://clojurians.slack.com/archives/C06MAR553/p1491337638160799
+https://github.com/glojurelang/glojure[Glojure], a Clojure interpreter hosted on https://go.dev/[Go], with extensible interop support, was announced by https://davidjarvis.com/who-am-i/[David Jarvis] in 2017.
+
+In 2026, https://resume.ingy.net/[Ingy döt Net] took an interest.
+He is actively leading new work on Glojure and has created https://github.com/gloathub/gloat[Gloat], which, among other things, creates native binaries from Glojure code.
+
+Glojure recognizes the `:glj` reader-conditional target, and files with the `.glj` extension as Glojure code.
+
+See also: <<joker>>.
+
+[#clojerl,reftext=§CloJerl]
+== Clojerl {s} Erlang VM {s} 2017-
+// Announced ??? v0.1.0 released on 2017-10-23, seems still active?
+https://github.com/clojerl/clojerl[Clojerl], Clojure for the https://www.erlang.org/blog/a-brief-beam-primer/[Erlang VM], was released by https://juan.facorro.com/[Juan Facorro] in 2017.
+
+From the README:
+
+> It is fair to say that combining the power of the Erlang VM with the expressiveness of Clojure could provide an interesting, useful result to make the lives of many programmers simpler and make the world a happier place.
+
+Clojerl recognizes the `:clje` reader-conditional target, and files with the `.clje` extension as Clojerl code.
+
+[#ferret,reftext=§Ferret]
+== Ferret {s} Embedded C++11 {s} 2018-2020
+// Announced ?? no changelog... does release clojars but doesn't use sortable versions...
+// first release might be 2018-08-07 https://clojars.org/ferret/versions/0.3.0-9afb392
+// last release might be 2020-01-29 https://clojars.org/ferret/versions/0.4.0-171a575
+https://github.com/nakkaya/ferret[Ferret], a free software lisp implementation for real time embedded control systems, was released by https://nakkaya.com/contact.html[Nurullah Akkaya] in 2018.
+
+Interesting fact: Perhaps in the spirit of embedding, all source code for the project is kept in a single org-mode file named ferret.org.
+
+See also <<jank>>.
+
+[#basilisp,reftext=§Basilisp]
+== Basilisp {s} Python 3 {s} 2018-
+// Announced ??? - first release 2018-08-31 https://github.com/basilisp-lang/basilisp/blob/main/CHANGELOG.md#v01dev0---2018-08-31
+https://github.com/basilisp-lang/basilisp[Basilisp], a Clojure-compatible(-ish) Lisp dialect hosted on https://www.python.org/[Python 3] with seamless Python interop, was first released by https://github.com/sponsors/chrisrink10[Chris Rink] in 2018.
+
+Basilisp recognizes the `:lpy` reader-conditional target, and files with the `.lpy` extension as Basilisp code.
+
+****
+For another way to reach out to the Python ecosystem, have a peek at https://github.com/clj-python/libpython-clj[libpython-clj].
+****
+
+[#babashka,reftext=§Babashka]
+== Babashka {s} JVM via GraalVM {s} 2019-
+// Announced 2019-08-09 https://clojurians.slack.com/archives/C06MAR553/p1565359474208600
+https://book.babashka.org/[Babashka] is a https://www.graalvm.org/latest/reference-manual/native-image/[native], fast starting Clojure interpreter for cross-platform scripting.
+This very popular runtime includes many Clojure libraries built-in, and works with a large array of Clojure libraries.
+https://github.com/sponsors/borkdude[Michiel Borkent] made his first release of Babashka in 2019.
+
+Babashka uses https://github.com/babashka/SCI[SCI], the Small Clojure Interpreter.
+
+Babashka recognizes the `:bb` (or `:clj`, whichever comes first) reader-conditional target, and files with the `.bb` (or `.clj`) extension as Babashka code.
+
+[#clojurers,reftext=§ClojureRS]
+== ClojureRS {s} Rust {s} 2020-.?.
+// Announced ?? no releases, no changelog, first commit 2020-03-18, last commit 2023-04-16 (as of this writing)
+https://github.com/clojure-rs/ClojureRS[ClojureRS], Clojure, implemented atop https://rust-lang.org/[Rust], was created by https://github.com/Tko1[Cameron Cooper] in 2020.
+
+I don't see any announcements or releases.
+Perhaps this was an initial experiment.
+
+[#scittle,reftext=§Scittle]
+== Scittle {s} JavaScript {s} 2021-
+// Announced 2021-06-12 https://clojurians.slack.com/archives/C06MAR553/p1623510278217800
+https://github.com/babashka/scittle[Scittle] allows you to execute Clojure(Script) directly from browser script tags via https://github.com/babashka/SCI[SCI].
+https://github.com/sponsors/borkdude[Michiel Borkent] announced Scittle in 2021.
+
+Scittle allows for quick front-end development with no build ceremony at all.
+
+Scittle recognizes the `:scittle` reader-conditional target.
+
+[#nbb,reftext=§Nbb]
+== nbb {s} JavaScript {s} 2021-
+// Announced 2021-07-31 https://clojurians.slack.com/archives/C06MAR553/p1627745756012600
+https://github.com/babashka/nbb[nbb] provides scripting in Clojure on https://nodejs.org[Node.js] using https://github.com/babashka/SCI[SCI].
+It can be thought of as Babashka, but for Node.js.
+https://github.com/sponsors/borkdude[Michiel Borkent] announced nbb in 2021.
+
+Nbb recognizes `:org.babashka/nbb` (and `:cljs`, whichever comes first).
+
+[#clojuredart,reftext=§ClojureDart]
+== ClojureDart {s} Flutter & Dart {s} 2022-
+// Announced 2022-04-19 https://clojurians.slack.com/archives/C06MAR553/p1650373742801309
+https://github.com/Tensegritics/ClojureDart[ClojureDart] is a Clojure dialect for https://flutter.dev/[Flutter] and https://dart.dev/[Dart].
+The inventors and leads for this project are https://github.com/sponsors/cgrand[Christophe Grand] & https://github.com/sponsors/dupuchba[Baptiste Dupuch].
+It was first announced in 2022, is being used for production applications, and remains under active development.
+
+ClojureDart recognizes the `:cljd` reader-conditional target, and files with the `.cljd` extension as ClojureDart code.
+
+[#cherry,reftext=§Cherry]
+== Cherry {s} JavaScript {s} 2022-
+// Announced 2022-08-02 https://clojurians.slack.com/archives/C06MAR553/p1659438874095699
+https://github.com/squint-cljs/cherry[Cherry] is an experimental ClojureScript to https://hacks.mozilla.org/2015/08/es6-in-depth-modules/[ES6 module] compiler.
+https://github.com/sponsors/borkdude[Michiel Borkent] first announced Cherry in 2022.
+
+Although <<squint>> and Cherry share some underlying tech, Cherry is a full-fledged ClojureScript compiler.
+It might gain traction, or it might inspire changes to <<clojurescript>>, or both.
+
+Fun fact: Cherry was initially forked from <<scriptjure>>.
+
+Cherry recognizes the `:cherry` reader-conditional target.
+
+[#squint,reftext=§Squint]
+== Squint {s} JavaScript {s} 2022-
+// Announced 2022-08-18 https://clojurians.slack.com/archives/C06MAR553/p1769439178989039
+https://github.com/squint-cljs/squint[Squint] is a light-weight ClojureScript dialect.
+https://github.com/sponsors/borkdude[Michiel Borkent] first released Squint in 2022.
+
+If you squint, it looks like Clojure, but it is really a lightweight transpiler of ClojureScript syntax to mutable JavaScript.
+
+Fun fact: Squint was initially forked from <<scriptjure>>.
+
+Fun fact: Squint was originally called ClavaScript.
+
+Squint recognizes the `:squint` reader-conditional target.
+
+[#clojurewasm,reftext=§ClojureWasm]
+== ClojureWasm {s} WebAssembly {s} 2026-
+// Announced ???, first release 2026-02-13 https://github.com/clojurewasm/ClojureWasm/releases/tag/v0.1.0
+https://github.com/clojurewasm/ClojureWasm[ClojureWasm] is an independent Clojure runtime implemented in https://ziglang.org/[Zig], optimized for high-performance native execution and deep WebAssembly runtime integration.
+https://github.com/sponsors/chaploud[Shota Kudo] created ClojureWasm in 2026.
+
+This Pre-Alpha experiment can interop with https://webassembly.github.io/spec/core/syntax/modules.html[WebAssembly modules].
+It can also be used to build your own stand-alone executable that does not require ClojureWasm.
+
+ClojureWasm recognizes the `:cljw` (and `:clj`) reader-conditional target.
+
+[#cream,reftext=§Cream]
+== Cream {s} JVM via GraalVM + Crema {s} 2026-
+// Announced 2026-02-22 https://clojurians.slack.com/archives/C06MAR553/p1771779902327969
+https://github.com/borkdude/cream[Cream] is a fast starting Clojure runtime built with GraalVM native-image + https://github.com/oracle/graal/issues/11327[Crema]
+Cream is another https://github.com/sponsors/borkdude[Michiel Borkent] experiment, created in 2026.
+
+GraalVM's Crema allows for eval, so unlike <<babashka>>, it does not require https://github.com/babashka/SCI[SCI] and supports runtime class loading.
+
+This is a very early, but interesting, experiment.
+
+Since this is really running Clojure on a JVM, is it really a dialect?
+We can rationalize that its unique runtime (and its limitations) make it one.
+Besides, we aren't terribly pedantic.
+
+== License
+
+Distributed under the EPL License, same as Clojure. See LICENSE.
