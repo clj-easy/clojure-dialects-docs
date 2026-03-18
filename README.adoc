@@ -231,10 +231,12 @@ Squint recognizes the `:squint` reader-conditional target.
 == Glojure {s} Go {s} 2023-
 // James Hamlin version: first commit 2022-11-05, first release 2023-11-07
 // David Jarvis version: Announced 2017-04-04 https://clojurians.slack.com/archives/C06MAR553/p1491337638160799
-https://github.com/glojurelang/glojure[Glojure], a Clojure interpreter hosted on https://go.dev/[Go], with extensible interop support, was first released by https://github.com/jfhamlin[James Hamlin] in 2023.
+https://github.com/glojurelang/glojure[Glojure] is a Clojure interpreter hosted on https://go.dev/[Go] with the Clojure core libraries available (as Go), full Go interop support, AOT compilation to Go source code, and REPL support.
+https://github.com/jfhamlin[James Hamlin] made his first release of Glojure in 2023.
 
-In 2026, https://resume.ingy.net/[Ingy döt Net] took an interest.
-Ingy is actively contributing to Glojure (in a https://github.com/gloathub/glojure[fork] he fully plans merge back to the mainline), and has created https://github.com/gloathub/gloat[Gloat], which, among other things, creates native binaries from Glojure code.
+In 2025, https://github.com/ingydotnet/[Ingy döt Net] started collaborating on Glojure and in 2026 created the Glojure Automation Tool, https://gloathub.org/[Gloat].
+Gloat is a zero-dependency CLI that compiles Clojure (and https://yamlscript.org[YAMLScript]) code to Go-project-ready Go code, native binaries & shared libraries (for more than 20 architectures), and Wasm binaries (both server and browser).
+Gloat is currently using https://github.com/gloathub/glojure[an actively developed fork of Glojure] with plans to merge improvements and bug fixes upstream.
 
 Glojure recognizes the `:glj` reader-conditional target, and files with the `.glj` extension as Glojure code.
 
