@@ -120,18 +120,6 @@ Joker recognizes the `:joker` reader-conditional target, and files with the `.jo
 
 See also: <<glojure>>.
 
-[#glojure,reftext=§Glojure]
-== Glojure {s} Go {s} 2017-
-// Announced 2017-04-04 https://clojurians.slack.com/archives/C06MAR553/p1491337638160799
-https://github.com/glojurelang/glojure[Glojure], a Clojure interpreter hosted on https://go.dev/[Go], with extensible interop support, was announced by https://davidjarvis.com/who-am-i/[David Jarvis] in 2017.
-
-In 2026, https://resume.ingy.net/[Ingy döt Net] took an interest.
-He is actively leading new work on Glojure and has created https://github.com/gloathub/gloat[Gloat], which, among other things, creates native binaries from Glojure code.
-
-Glojure recognizes the `:glj` reader-conditional target, and files with the `.glj` extension as Glojure code.
-
-See also: <<joker>>.
-
 [#clojerl,reftext=§CloJerl]
 == Clojerl {s} Erlang VM {s} 2017-
 // Announced ??? v0.1.0 released on 2017-10-23, seems still active?
@@ -238,6 +226,25 @@ Fun fact: Squint was initially forked from <<scriptjure>>.
 Fun fact: Squint was originally called ClavaScript.
 
 Squint recognizes the `:squint` reader-conditional target.
+
+[#glojure,reftext=§Glojure]
+== Glojure {s} Go {s} 2023-
+// James Hamlin version: first commit 2022-11-05, first release 2023-11-07
+// David Jarvis version: Announced 2017-04-04 https://clojurians.slack.com/archives/C06MAR553/p1491337638160799
+https://github.com/glojurelang/glojure[Glojure], a Clojure interpreter hosted on https://go.dev/[Go], with extensible interop support, was first released by https://github.com/jfhamlin[James Hamlin] in 2023.
+
+In 2026, https://resume.ingy.net/[Ingy döt Net] took an interest.
+Ingy is actively contributing to Glojure (in a https://github.com/gloathub/glojure[fork] he fully plans merge back to the mainline), and has created https://github.com/gloathub/gloat[Gloat], which, among other things, creates native binaries from Glojure code.
+
+Glojure recognizes the `:glj` reader-conditional target, and files with the `.glj` extension as Glojure code.
+
+****
+In your travels, you might also stumble upon another https://github.com/venantius/glojure[Glojure] by https://github.com/venantius[David Jarvis].
+This work was announced in 2017.
+It is documented as incomplete, and has not had new activity since 2017.
+****
+
+See also: <<joker>>.
 
 [#clojurewasm,reftext=§ClojureWasm]
 == ClojureWasm {s} WebAssembly {s} 2026-
