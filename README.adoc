@@ -5,6 +5,8 @@
 :toclevels: 3
 // a wee separator used in section headings:
 :s: ⬩
+// github star unit
+:star: ☆
 
 == Introduction
 https://clojure.org/[Clojure] has inspired a variety of dialects.
@@ -12,12 +14,107 @@ This little repository's goal is to provide a brief description of each with lin
 
 We consider something a Clojure dialect when it runs Clojure (or very Clojure-ish) code.
 Support for a dialect-specific reader-conditional target is a good hint that we have a true dialect.
-You'll find dialects sorted by their birth year.
+You'll find dialects sorted by their birth year below.
 
 Where appropriate/possible, we've linked authors' sponsorship pages; consider sponsoring as a way of not only supporting ongoing work but also as a way of saying thank you for past efforts.
 
 Additions and corrections to this living document are most welcome from the community.
 
+== Dialects Popularity Rankings
+It useful to see Clojure dialects ranked by some measure of popularity.
+https://clojure.org/news/2026/02/18/state-of-clojure-2025#dialects-tools[Question 23 of the 2025 Clojure Survey] asked, "Which dialects of Clojure have you used in the last year?"
+
+Here's how our listed dialects ranked from the Survey:
+
+// Rankings last updated 2026-03-19
+|===
+| Clojure Dialect | Percentage of Respondents Using | Count of Respondents Using | {star} GitHub Stars (as of March 2026)
+
+| <<clojure>>
+| 98.5%
+| 1,457
+| 10.8k
+
+| <<babashka>>
+| 60.0%
+| 887
+| 4.5k
+
+| <<clojurescript>>
+| 55.7%
+| 823
+| 9.4k
+
+| <<nbb>>
+| 5.4%
+| 80
+| 940
+
+| <<squint>>
+| 5.2%
+| 77
+| 842
+
+| <<clojuredart>>
+| 4.7%
+| 69
+| 1.6k
+
+| <<jank>>
+| 4.7%
+| 69
+| 3.2k
+
+| <<scittle>>
+| 4.5%
+| 66
+| 421
+
+| <<joyride>>
+| 2.2%
+| 33
+| 571
+
+| <<cherry>>
+| 1.4%
+| 21
+| 636
+
+| <<clojureclr>>
+| 1.4%
+| 20
+| 1.6k
+
+| <<basilisp>>
+| 1.2%
+| 18
+| 441
+
+| <<clojerl>>
+| 0.4%
+| 6
+| 1.7k
+
+| <<joker>>
+| 0.2%
+| 3
+| 1.7k
+
+| <<glojure>>
+| 0.2%
+| 3
+| 497
+
+|===
+
+Coming in with 0 responses this year were:
+
+* truly historical dialects: <<scriptjure>> 192{star}, <<las3r>> 94{star},
+* more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
+* experimental dialects: <<clojurers>> 975{star}
+* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}
+
+[#clojure,reftext=§Clojure]
 == Clojure {s} JVM {s} 2007-
 https://clojure.org/[Clojure] is the granddaddy of them all.
 https://en.wikipedia.org/wiki/Clojure[Clojure] was invented by https://github.com/sponsors/richhickey[Rich Hickey].
@@ -189,7 +286,16 @@ https://github.com/babashka/nbb[nbb] provides scripting in Clojure on https://no
 It can be thought of as Babashka, but for Node.js.
 https://github.com/sponsors/borkdude[Michiel Borkent] announced nbb in 2021.
 
-Nbb recognizes `:org.babashka/nbb` (and `:cljs`, whichever comes first).
+Nbb recognizes the `:org.babashka/nbb` (and `:cljs`, whichever comes first) reader-conditional tag.
+
+[#joyride,reftext=§Joyride]
+== Joyride {s} JavaScript {s} 2022-
+// Announced 2022-04-07 https://clojurians.slack.com/archives/C06MAR553/p1651070702375889
+https://github.com/BetterThanTomorrow/joyride[Joyride], making VS Code hackable like Emacs since 2022, was created by https://github.com/sponsors/PEZ[Peter Strömberg] and https://github.com/sponsors/borkdude[Michiel Borkent].
+
+Joyride uses https://github.com/babashka/SCI[SCI], the Small Clojure Interpreter.
+
+Joyride recognizes the `:joyride` (and `:cljs`) reader-conditional target.
 
 [#clojuredart,reftext=§ClojureDart]
 == ClojureDart {s} Flutter & Dart {s} 2022-
