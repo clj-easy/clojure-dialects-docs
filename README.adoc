@@ -304,6 +304,9 @@ https://github.com/Tensegritics/ClojureDart[ClojureDart] is a Clojure dialect fo
 The inventors and leads for this project are https://github.com/sponsors/cgrand[Christophe Grand] & https://github.com/sponsors/dupuchba[Baptiste Dupuch].
 It was first announced in 2022, is being used for production applications, and remains under active development.
 
+ClojureDart supports multiple targets.
+It can compile to native binaries (iOS, Android, macOS, Linux, and Windows) and can also target JavaScript and WASM.
+
 ClojureDart recognizes the `:cljd` reader-conditional target, and files with the `.cljd` extension as ClojureDart code.
 
 [#cherry,reftext=§Cherry]
