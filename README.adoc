@@ -112,7 +112,7 @@ Coming in with 0 responses this year were:
 * truly historical dialects: <<scriptjure>> 192{star}, <<las3r>> 94{star},
 * more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
 * experimental dialects: <<clojurers>> 975{star}
-* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}
+* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<clojurefnl>> 1{star}
 
 [#clojure,reftext=§Clojure]
 == Clojure {s} JVM {s} 2007-
@@ -381,6 +381,15 @@ This is a very early, but interesting, experiment.
 Since this is really running Clojure on a JVM, is it really a dialect?
 We can rationalize that its unique runtime (and its limitations) make it one.
 Besides, we aren't terribly pedantic.
+
+[#clojurefnl,reftext=§ClojureFnl]
+== ClojureFnl {s} Fennel {s} 2026-
+// Announced 2026-04-08 here https://andreyor.st/posts/2026-04-07-clojure-on-fennel-part-one-persistent-data-structures/
+https://gitlab.com/andreyorst/clojurefnl[ClojureFnl] is an early proof of concept of a Clojure to https://fennel-lang.org/[Fennel] transpiler.
+It was https://andreyor.st/posts/2026-04-07-clojure-on-fennel-part-one-persistent-data-structures/[announced] in 2026 by https://andreyor.st/about/[Andrey Listopadov].
+The ClojureFnl runtime host is https://www.lua.org/start.html[Lua].
+
+ClojureFnl recognizes the `:cljfnl` reader conditional target.
 
 == License
 
