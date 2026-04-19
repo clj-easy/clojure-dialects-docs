@@ -112,7 +112,7 @@ Coming in with 0 responses this year were:
 * truly historical dialects: <<scriptjure>> 192{star}, <<las3r>> 94{star},
 * more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
 * experimental dialects: <<clojurers>> 975{star}
-* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<clojurefnl>> 1{star}
+* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<clojurefnl>> 1{star}, <<cljrs>> 1{star}
 
 [#clojure,reftext=§Clojure]
 == Clojure {s} JVM {s} 2007-
@@ -390,6 +390,17 @@ It was https://andreyor.st/posts/2026-04-07-clojure-on-fennel-part-one-persisten
 The ClojureFnl runtime host is https://www.lua.org/start.html[Lua].
 
 ClojureFnl recognizes the `:cljfnl` reader conditional target.
+
+[#cljrs,reftext=§cljrs]
+== cljrs {s} Rust {s} 2026-
+// Shared on Slack on 2026-04-19 https://clojurians.slack.com/archives/C03RZGPG3/p1776625152001149
+https://www.tytr.dev/about[Ty Tracey] started work on https://tytrdev.github.io/cljrs/[cljrs] in 2026.
+
+// copied from cljrs web page:
+`cljrs` is a Clojure dialect implemented from scratch in Rust.
+The reader, evaluator, macros, and persistent collections run as a tree walker.
+Type-hinted functions compile to native code through MLIR and LLVM.
+GPU kernels compile to WGSL and run on Metal, Vulkan, DX12, or WebGPU.
 
 == License
 
