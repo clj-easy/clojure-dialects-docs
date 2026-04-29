@@ -273,12 +273,15 @@ Perhaps this was an initial experiment.
 [#phel,reftext=§Phel]
 == Phel {s} PHP {s} 2020-
 // First commit 2020-04-19, first release v0.1.0 on 2021-01-31
-https://phel-lang.org/[Phel] is a functional, Lisp-inspired language that compiles to https://www.php.net/[PHP].
-Inspired by Clojure, Phel brings macros, persistent data structures, and expressive functional idioms to the PHP ecosystem.
-https://github.com/jenshaase[Jens Haase] made his first commit to https://github.com/phel-lang/phel-lang[Phel] in 2020 and released v0.1.0 in 2021.
+https://phel-lang.org/[Phel], a functional, Lisp-inspired language that compiles to https://www.php.net/[PHP], was created by https://github.com/jenshaase[Jens Haase] in 2020 and first released as v0.1.0 in 2021.
+Inspired by Clojure, Phel brings macros, persistent data structures, and a REPL to the PHP ecosystem, with seamless PHP interop.
 Phel is currently maintained by https://github.com/Chemaclass[Chemaclass].
 
-Phel files use the `.phel` extension.
+Phel does not have a phel-specific reader-conditional target. Files use the `.phel` extension.
+
+****
+Phel is distributed through https://packagist.org/packages/phel-lang/phel-lang[Composer] (`composer require phel-lang/phel-lang`), giving direct access to the PHP ecosystem.
+****
 
 [#scittle,reftext=§Scittle]
 == Scittle {s} JavaScript {s} 2021-
