@@ -113,6 +113,7 @@ Coming in with 0 responses this year were:
 * more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
 * experimental dialects: <<clojurers>> 975{star}
 * dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<clojurefnl>> 1{star}, <<cljrs>> 1{star}
+* not in survey but active: <<phel>> 480{star}
 
 [#clojure,reftext=§Clojure]
 == Clojure {s} JVM {s} 2007-
@@ -268,6 +269,16 @@ https://github.com/clojure-rs/ClojureRS[ClojureRS], Clojure, implemented atop ht
 
 I don't see any announcements or releases.
 Perhaps this was an initial experiment.
+
+[#phel,reftext=§Phel]
+== Phel {s} PHP {s} 2020-
+// First commit 2020-04-19, first release v0.1.0 on 2021-01-31
+https://phel-lang.org/[Phel] is a functional, Lisp-inspired language that compiles to https://www.php.net/[PHP].
+Inspired by Clojure, Phel brings macros, persistent data structures, and expressive functional idioms to the PHP ecosystem.
+https://github.com/jenshaase[Jens Haase] made his first commit to https://github.com/phel-lang/phel-lang[Phel] in 2020 and released v0.1.0 in 2021.
+Phel is currently maintained by https://github.com/Chemaclass[Chemaclass].
+
+Phel files use the `.phel` extension.
 
 [#scittle,reftext=§Scittle]
 == Scittle {s} JavaScript {s} 2021-
