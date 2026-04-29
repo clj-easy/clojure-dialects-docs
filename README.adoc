@@ -16,6 +16,8 @@ We consider something a Clojure dialect when it runs Clojure (or very Clojure-is
 Support for a dialect-specific reader-conditional target is a good hint that we have a true dialect.
 You'll find dialects sorted by their birth year below.
 
+For a list that includes Clojure-like or Clojure-inspired dialects, see https://github.com/ilevd/clojure-like[Clojure-like].
+
 Where appropriate/possible, we've linked authors' sponsorship pages; consider sponsoring as a way of not only supporting ongoing work but also as a way of saying thank you for past efforts.
 
 Additions and corrections to this living document are most welcome from the community.
