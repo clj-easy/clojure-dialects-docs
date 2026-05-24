@@ -279,7 +279,7 @@ https://phel-lang.org/[Phel], a functional, Lisp-inspired language that compiles
 Inspired by Clojure, Phel brings macros, persistent data structures, and a REPL to the PHP ecosystem, with seamless PHP interop.
 Phel is currently maintained by https://github.com/Chemaclass[Chemaclass].
 
-Phel does not have a phel-specific reader-conditional target. Files use the `.phel` extension.
+Phel recognizes the `:phel` reader-conditional target, and files with the `.phel` extension as Phel code.
 
 ****
 Phel is distributed through https://packagist.org/packages/phel-lang/phel-lang[Composer] (`composer require phel-lang/phel-lang`), giving direct access to the PHP ecosystem.
