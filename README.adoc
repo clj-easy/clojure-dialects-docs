@@ -111,7 +111,7 @@ Here's how our listed dialects ranked from the Survey:
 
 Coming in with 0 responses this year were:
 
-* not in survey but active: <<phel>> 506{star}
+* not in survey but active: <<phel>> 506{star}, <<let-go>> 467{star}
 * truly historical dialects: <<scriptjure>> 192{star}, <<las3r>> 94{star},
 * more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
 * experimental dialects: <<clojurers>> 975{star}
@@ -284,6 +284,18 @@ Phel recognizes the `:phel` reader-conditional target, and files with the `.phel
 ****
 Phel is distributed through https://packagist.org/packages/phel-lang/phel-lang[Composer] (`composer require phel-lang/phel-lang`), giving direct access to the PHP ecosystem.
 ****
+
+[#let-go,reftext=§let-go]
+== let-go {s} Go {s} 2021-
+// Announced 2021-03-07 https://clojurians.slack.com/archives/C06MAR553/p1615154906270600
+// copied from README:
+https://github.com/nooga/let-go[let-go] is a Clojure dialect with a bytecode compiler and stack VM, written in Go.
+A single {tilde}10.7MB binary, {tilde}7ms cold start, no JVM.
+It passes the https://github.com/jank-lang/clojure-test-suite[jank-lang test suite].
+
+https://github.com/nooga[Marcin Gasperowicz] announced let-go in 2021.
+
+let-go recognizes the `:lg` reader-conditional target, and files with the `.lg` extension as let-go code.
 
 [#scittle,reftext=§Scittle]
 == Scittle {s} JavaScript {s} 2021-
