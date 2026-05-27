@@ -22,7 +22,7 @@ Additions and corrections to this living document are most welcome from the comm
 
 == Other Resources
 
-- https://clojure.cc/[Clojure Covey] - A covey of Clojure dialects. Catalog, comparison and instant REPLs for Clojure-family languages.
+- https://clojure.cc/[Clojure.cc] - A covey of Clojure dialects. Catalog, comparison and instant REPLs for Clojure-family languages.
 - https://github.com/ilevd/clojure-like[Clojure-like] - List of Clojure-inspired programming languages, including ports, dialects, compilers, environments etc.
 - https://github.com/chr15m/awesome-clojure-likes[awesome-clojure-likes] - Curated list of Clojure-like programming languages.
 
