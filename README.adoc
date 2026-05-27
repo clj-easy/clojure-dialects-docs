@@ -122,7 +122,7 @@ Coming in with 0 responses this year were:
 https://clojure.org/[Clojure] is the granddaddy of them all.
 https://en.wikipedia.org/wiki/Clojure[Clojure] was invented by https://github.com/sponsors/richhickey[Rich Hickey].
 His first release of Clojure was in 2007.
-Clojure is maintained by the Clojure Core Team, which, as of this writing, includes https://github.com/puredanger[Alex Miller], https://fogus.me/me/[Michael Fogus], and https://www.jarrodctaylor.com/about/[Jarrod Taylor].
+Clojure is maintained by the Clojure Dev Team, which, as of this writing, includes https://github.com/puredanger[Alex Miller], https://fogus.me/me/[Michael Fogus], https://www.jarrodctaylor.com/about/[Jarrod Taylor], https://github.com/ghadishayban[Ghadi Shayban], and https://www.cognitect.com/authors/StuartHalloway.html[Stuart Halloway] (and others!).
 Rich remains the lead.
 Clojure runs on the https://en.wikipedia.org/wiki/Java_virtual_machine[Java Virtual Machine] and has reach to the entire Java ecosystem.
 
