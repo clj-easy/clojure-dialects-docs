@@ -444,14 +444,15 @@ https://github.com/sponsors/rcarmo[Rui Carmo] announced https://github.com/rcarm
 See also: <<glojure>>.
 
 [#jolt,reftext=§Jolt]
-== Jolt {s} Janet {s} 2026-
+== Jolt {s} Chez Scheme {s} 2026-
 // Shared on Slack 2026-06-05 https://clojurians.slack.com/archives/C06MAR553/p1780694737700419
-https://github.com/jolt-lang/jolt[Jolt], a Clojure interpreter running on Janet, was announced by https://github.com/sponsors/yogthos[Dmitri Sotnikov] in 2026.
+https://github.com/jolt-lang/jolt[Jolt], a Clojure interpreter running on Janet, was announced by https://github.com/sponsors/yogthos[Dmitri Sotnikov] in 2026. And early on, switched from Janet to Chez.
 
 // copied from README
-Jolt reads Clojure source and, by default, compiles each form to native Janet bytecode — falling back to a tree-walking interpreter for forms the compiler doesn't handle, so results always match the interpreter.
-It ships a Clojure-compatible standard library.
-The goal is a Janet-hosted https://github.com/borkdude/sci[SCI]-style runtime with a minimal bootstrap.
+A Clojure implementation on https://cisco.github.io/ChezScheme/[Chez Scheme].
+Jolt reads Clojure source, analyzes it to a host-neutral IR, emits Scheme, and
+runs it on Chez. The compiler is self-hosted: it is written in Clojure
+(`jolt-core/`) and compiles itself. It ships a Clojure-compatible standard library.
 
 Jolt recognizes the `:jolt` reader conditional target, and files with the `.jolt` extension as Jolt code.
 
