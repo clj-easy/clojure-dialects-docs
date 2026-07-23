@@ -119,7 +119,7 @@ Coming in with 0 responses this year were:
 * truly historical dialects: <<scriptjure>> 192{star}, <<las3r>> 94{star},
 * more recent inactive dialects:  <<lumo>> 1.9k{star}, <<ferret>> 1.1k{star}, <<planck>> 1k{star}
 * experimental dialects: <<clojurers>> 975{star}
-* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<jolt>> 20{star}, <<clojurefnl>> 1{star}, <<cljrs>> 1{star}, <<go-joker>> 3{star}
+* dialects announced in 2026: <<cream>> 116{star}, <<clojurewasm>> 79{star}, <<jolt>> 20{star}, <<clojurefnl>> 1{star}, <<cljrs>> 1{star}, <<go-joker>> 3{star}, <<cljgo>> 6{star}
 
 [#clojure,reftext=§Clojure]
 == Clojure {s} JVM {s} 2007-
@@ -455,6 +455,17 @@ runs it on Chez. The compiler is self-hosted: it is written in Clojure
 (`jolt-core/`) and compiles itself. It ships a Clojure-compatible standard library.
 
 Jolt recognizes the `:jolt` reader conditional target, and files with the `.jolt` extension as Jolt code.
+
+[#cljgo,reftext=§cljgo]
+== cljgo {s} Go {s} 2026-
+// Share don Slack 2026-07-23 https://clojurians.slack.com/archives/C06MAR553/p1784826030526599
+https://github.com/muthuishere/cljgo[cljgo], Clojure hosted on Go, was announced by https://github.com/sponsors/muthuishere[Muthukumaran Navaneethakrishnan] in 2026.
+
+// copied from README
+Clojure hosted on Go: a compiler (written in Go) that AOT-emits plain Go source — the ClojureScript model with Go as the JavaScript — plus a tree-walk evaluator that is the REPL and the macro engine.
+The same source runs interpreted at the prompt and compiles to a single static native binary, with byte-identical output on both paths.
+
+cljgo recognizs the `:cljgo` reader conditional target, and files iwth the .`cljgo` extension as cljgo code.
 
 == License
 
